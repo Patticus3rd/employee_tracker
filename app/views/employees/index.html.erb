@@ -1,0 +1,12 @@
+<h1>Employees</h1>
+
+<% @employees.each do |employee| %>
+  <h2><%= employee.name %></h2>
+  <%= link_to 'Show Employee', employee_path(employee) %>
+  <%= link_to 'Edit Employee', edit_employee_path(employee) %>
+  <%= link_to 'Delete Employee', employee, method: :delete %>
+<% end %>
+
+
+
+<%= link_to 'Add Employee' , new_employee_path %>
